@@ -7,6 +7,7 @@ include: "*.view"
 include: "*.dashboard"
 
 explore: order_items {
+  persist_for: "5 minutes"
   join: orders {
     relationship: many_to_one
     sql_on: ${order_items.order_id}=${orders.id} ;;
